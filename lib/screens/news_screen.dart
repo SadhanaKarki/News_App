@@ -12,7 +12,7 @@ class _NewsScreenState extends State<NewsScreen> {
   @override
   void initState() {
     super.initState();
-    Provider.of<NewsProvider>(context, listen: false).fetchNews(); // gives instance of provider
+    Provider.of<NewsProvider>(context, listen: false).fetchNews(); 
   }
 
   @override

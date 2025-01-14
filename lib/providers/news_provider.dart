@@ -1,12 +1,12 @@
-import 'dart:convert'; // For JSON decoding
-import 'package:flutter/material.dart'; // For ChangeNotifier
+import 'dart:convert'; 
+import 'package:flutter/material.dart'; 
 import 'package:http/http.dart' as http;
 import 'package:practice_provider/model/news_model.dart'; 
 
 class NewsProvider with ChangeNotifier {
   List<News> _newsList = []; 
 
-  List<News> get newsList => _newsList; //  to access news list
+  List<News> get newsList => _newsList; 
 
   Future<void> fetchNews() async {
     final url = 'https://loksewaadmin.loksewatayariapp.com/news/source/TechPana/'; 
