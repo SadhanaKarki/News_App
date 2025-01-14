@@ -12,8 +12,8 @@ class NewsProvider with ChangeNotifier {
     final url = 'https://loksewaadmin.loksewatayariapp.com/news/source/TechPana/'; 
 
     try {
-      // Make the API call
-      print('Fetching news...');
+    
+
       final response = await http.get(Uri.parse(url));
 
       if (response.statusCode == 200) {
@@ -26,11 +26,11 @@ class NewsProvider with ChangeNotifier {
             .map((newsItem) => News.fromJson(newsItem))
             .toList();
 
-        print('News fetched successfully: ${_newsList.length} items');
+      
         notifyListeners();
       }
       else {
-        print('Error: ${response.statusCode}');
+      
         throw Exception('Failed to fetch news.');
       }
     } catch (error) {
