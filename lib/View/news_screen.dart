@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice_provider/providers/news_provider.dart';
+import 'package:practice_provider/viewModel/viewmodel.dart';
 import 'package:provider/provider.dart';
 
 
@@ -12,12 +12,12 @@ class _NewsScreenState extends State<NewsScreen> {
   @override
   void initState() {
     super.initState();
-    Provider.of<NewsProvider>(context, listen: false).fetchNews(); 
+    Provider.of<NewsViewModel>(context, listen: false).fetchNews(); 
   }
 
   @override
   Widget build(BuildContext context) {
-    final newsProvider = Provider.of<NewsProvider>(context);
+    final newsProvider = Provider.of<NewsViewModel>(context);
 
     return Scaffold(
       appBar: AppBar(

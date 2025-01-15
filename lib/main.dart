@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practice_provider/providers/news_provider.dart';
-import 'package:practice_provider/screens/news_screen.dart';
+import 'package:practice_provider/viewModel/viewmodel.dart';
+import 'package:practice_provider/View/news_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => NewsProvider(),
+      create: (_) => NewsViewModel(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'LokSewa Tayari App',
